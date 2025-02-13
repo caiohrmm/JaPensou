@@ -31,7 +31,7 @@ O sistema possui **autenticação baseada em sessão**, garantindo que apenas us
 
 ### 1️⃣ Clonar o repositório  
 ```sh
-git clone https://github.com/seu-usuario/japensou.git
+git clone https://github.com/caiohrmm/JaPensou.git
 ```
 ### 2️⃣ Instalar as dependências
 ```sh
