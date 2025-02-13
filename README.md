@@ -39,10 +39,13 @@ npm install
 ```
 
 ### 3️⃣ Criar um arquivo .env com as credenciais do banco
+```ini
 DB_NAME=japensou
 DB_USER=root
 DB_PASS=sua_senha
 DB_HOST=localhost
 DB_DIALECT=mysql
+```
+
 
 
