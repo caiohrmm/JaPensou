@@ -1,0 +1,55 @@
+<div class="thoughts-containerr">
+  {{#if search}}
+    <h1>Você está buscando por: <span class="color">{{search}}</span></h1>
+    {{#if thoughtsQty}}
+      <p>Foram encontrados
+        <span class="color">{{thoughtsQty}}</span>
+        pensamentos!</p>
+    {{else}}
+      <p>Não achamos nenhum pensamento com essa sua busca!</p>
+    {{/if}}
+  {{else}}
+    <h1>Todos os <span class="color">pensamentos</span></h1>
+    {{#if thoughtsQty}}
+      <p>Existem
+        <span class="color">{{thoughtsQty}}</span>
+        pensamentos no sistema!</p>
+    {{else}}
+      <p>Não temos pensamentos cadastrados no sistema por enquanto...</p>
+    {{/if}}
+  {{/if}}
+  <form action="/" method="get" class="search">
+    <input type="text" name="search" placeholder="Busque por algo..." />
+    <button type="submit" class="btn">
+      <i class="bi bi-search"></i>
+    </button>
+  </form>
+  <div class="order-container">
+    <span>Ordenar por: </span>
+    <form action="/" method="get">
+      <input type="hidden" name="search" value="{{this.search}}" />
+      <input type="hidden" name="order" value="new" />
+      <button type="submit" class="btn">
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </form>
+    <form action="/" method="get">
+      <input type="hidden" name="search" value="{{this.search}}" />
+      <input type="hidden" name="order" value="old" />
+      <button type="submit" class="btn">
+        <i class="bi bi-arrow-down"></i>
+      </button>
+    </form>
+    <a href="/">Limpar filtros</a>
+  </div>
+  <ul class="thoughts-container">
+    {{#each thoughts}}
+      <li>
+        <span class="label">
+          {{this.title}}
+        </span>
+        <span>Feito por <span class="color">{{this.User.name}}</span></span>
+      </li>
+    {{/each}}
+  </ul>
+</div>

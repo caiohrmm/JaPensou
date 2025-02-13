@@ -1,0 +1,30 @@
+<div class="dashboard">
+  <div class="title-container">
+    <h2>Dashboard</h2>
+    <a href="/thoughts/add">Criar pensamento <i class="bi bi-lightbulb-fill"></i></a>
+  </div>
+  <h3>Seus pensamentos</h3>
+  <ul class="thoughts-container">
+    {{#each thoughts}}
+    <li>
+        <span class="label">
+            {{this.title}}
+        </span>
+        <span class="actions">
+            <a href="/thoughts/edit/{{this.id}}"><i class="bi bi-pen"></i></a>
+            <form action="/thoughts/delete" method="post">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit" class="btn-delete">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </form>
+        </span>
+    </li>
+    {{/each}}
+  </ul>
+  <div class="empty">
+    {{#if emptyThoughts}}
+        <p>Você ainda não tem nenhum pensamento! Comece a pensar amigo! <i class="bi bi-lightbulb-fill"></i></p>
+    {{/if}}
+  </div>
+</div>

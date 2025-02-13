@@ -1,0 +1,22 @@
+<div class="thought-container">
+  <h2>Editando um pensamento...</h2>
+  <br />
+  <form action="/thoughts/edit" method="POST">
+    {{#with thought}}
+    <input type="hidden" name="id" value="{{id}}">
+    <label for="title"></label>
+    <textarea
+      name="title"
+      id=""
+      cols="30"
+      rows="5"
+      placeholder="Digite seu pensamento..."
+    >{{title}}</textarea>
+    <input type="submit" value="Editar Pensamento" />
+    {{/with}}
+  </form>
+  <div class="back">
+    <a href="/thoughts/dashboard">Voltar</a>
+  </div>
+
+</div>
