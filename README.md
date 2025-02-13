@@ -47,5 +47,18 @@ DB_HOST=localhost
 DB_DIALECT=mysql
 ```
 
+### 4️⃣ Iniciar o servidor
+```sh
+npm start
+```
+
+### 🎨 Layout
+
+O front-end utiliza Handlebars como template engine, proporcionando uma interface dinâmica e interativa.
+
+### 💡 Curtiu o projeto? Deixe uma ⭐ no repositório!
+
+
+
 
 
